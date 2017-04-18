@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>XY INC. 2017</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron" align="center" style="margin-top: 50px;">
+			<h2>
+				<b>XY - INC.</b>
+			</h2>
+			<h3>Welcome to the "Mobile Dev Back End Support Tool"</h3>
+			<h4>Raphael Rodrigues Honda - Developer Test</h4>
+			<h5>The purpose of this software is to help Mobile Developers to
+				insert entities in the database. Then, it is possible to insert
+				Clients, Suppliers and also a Car Fleet.</h5>
+			<h5>So, Hypothetically, XY INC. is a corporation and we need to
+				manage Clients, Suppliers and a Fleet.</h5>
+
+
+			<hr />
+			<div align="center">
+				<a href="clientlist" class="btn btn-lg btn-primary">Clients</a> <a
+					href="supplierlist" class="btn btn-lg btn-primary">Suppliers</a> <a
+					href="carfleetlist" class="btn btn-lg btn-primary">Cars</a>
+			</div>
+		</div>
+
+
+		<hr />
+
+		<div class="container">
+			<div class="jumbotron" align="center" style="margin-top: 50px;">
+				<h5>In addition to the GUI, a RESTFul implementation of a CRUD
+					was implemented and can be accessed by the following URIs:</h5>
+
+				<br />
+
+				<h3>Client</h3>
+
+
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-success">Client by
+						ID -> localhost:{port}/getclientservice/{id}</li>
+					<li class="list-group-item list-group-item-success">All
+						Clients -> localhost:{port}/allclientsservice</li>
+					<li class="list-group-item list-group-item-success">Insert a
+						Client ->
+						localhost:{port}/createclientservice/{name}/{email}/{telephone}</li>
+					<li class="list-group-item list-group-item-success">Update a
+						Client ->
+						localhost:{port}/updateclientservice/{id}/{name}/{email}/{telephone}</li>
+					<li class="list-group-item list-group-item-success">Remove a
+						Client -> localhost:{port}/removeclientservice/{id}</li>
+				</ul>
+
+				<br />
+
+				<h3>Suppliers</h3>
+
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-info">Supplier by
+						ID -> localhost:{port}/getsupplierservice/{id}</li>
+					<li class="list-group-item list-group-item-info">All Suppliers
+						-> localhost:{port}/allsuppliersservice</li>
+					<li class="list-group-item list-group-item-info">Insert a
+						Supplier -> localhost:{port}/createsupplierservice/{name}/{lineOfBusiness}/{telephone}</li>
+					<li class="list-group-item list-group-item-info">Update a
+						Supplier ->
+						localhost:{port}/updatesupplierservice/{id}/{name}/{lineOfBusiness}/{telephone}</li>
+					<li class="list-group-item list-group-item-info">Remove a
+						Supplier -> localhost:{port}/removesupplierservice/{id}</li>
+				</ul>
+
+				<br />
+
+				<h3>Fleet</h3>
+
+				<ul class="list-group">
+					<li class="list-group-item list-group-item-warning">Car by ID
+						-> localhost:{port}/getcarservice/{id}</li>
+					<li class="list-group-item list-group-item-warning">Fleet
+						-> localhost:{port}/fleet</li>
+					<li class="list-group-item list-group-item-warning">Insert a
+						Car -> localhost:{port}/createcarservice/{modelName}/{price}/{patrimonyTag}</li>
+					<li class="list-group-item list-group-item-warning">Update a
+						Car ->
+						localhost:{port}/updatecarservice/{id}/{modelName}/{price}/{patrimonyTag}</li>
+					<li class="list-group-item list-group-item-warning">Remove a
+						Car -> localhost:{port}/removecarservice/{id}</li>
+				</ul>
+
+				<h3>Tests</h3>
+
+				<div class="alert alert-info">
+					<h5>
+						<strong>Use a Tool like	SOAP UI or Postman</strong>
+					</h5>
+				</div>
+
+				<br />
+
+				<h3>Running Application Using FAT/UBER Jar</h3>
+				<div class="alert alert-info">
+					<h5>
+						<strong>If you want to run this application using FATJar,
+							please use command "mvn clean install" to generate the artifact
+							and then run it using windows prompt by typing "java -jar
+							"jarName.jar"</strong>
+					</h5>
+				</div>
+
+				<br />
+
+				<h5>Developed By Raphael Rodrigues Honda. raphaelrh88@gmail.com
+					- April/2017</h5>
+				<h5>This is just part of a selection process for a company in
+					Brazil. Feel free to modify or use it as reference.</h5>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

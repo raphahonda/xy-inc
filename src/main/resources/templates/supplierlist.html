@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Supplier List</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+	<div class="container">
+
+		<div id="supplierList">
+
+
+			<div align="center">
+				<h1>GUI to support Mobile Developer</h1>
+			</div>
+
+			<div align="center">
+				<h5>Here you can add a complete SUPPLIER Entity.</h5>
+			</div>
+
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Full Name</th>
+						<th>Line of Business</th>
+						<th>Telephone</th>
+					</tr>
+				</thead>
+				<tr th:each="supplier : ${supplier}">
+					<td><span th:text="${supplier.id}"></span></td>
+					<td><span th:text="${supplier.name}"></span></td>
+					<td><span th:text="${supplier.lineOfBusiness}"></span></td>
+					<td><span th:text="${supplier.telephone}"></span></td>
+				</tr>
+
+			</table>
+		</div>
+
+		<br/>
+
+		<form action="createSupplier" method="post">
+			<div class="form-group">
+				<label for="name">Full Name</label> <input type="text"
+					class="form-control" id="name" name="name" placeholder="Name" />
+			</div>
+
+			<div class="form-group">
+				<label for="lineOfBusiness">Line of Business (Sport, Turismo, Hybrid, Etc.)</label> <input type="text"
+					class="form-control" id="lineOfBusiness" name="lineOfBusiness" placeholder="lineOfBusiness" />
+			</div>
+
+			<div class="form-group">
+				<label for="telephone">Telephone</label> <input type="text"
+					class="form-control" id="telefone" name="telephone"
+					placeholder="Telephone" />
+			</div>
+
+			<br />
+
+			<button type="submit" class="btn btn-success">Add Supplier</button>
+			<a href="/" class="btn btn-info" role="button">Back</a>
+		</form>
+
+	</div>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
